@@ -22,18 +22,18 @@ h1 {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: url('../images/Photo-header_EnsembleCitoyens.jpg');
-  background-position: 0px 0px;
-  background-size: contain;
+  background-image: url('../images/Photo-header_EnsembleCitoyens_v2.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 .logo {
   display: inline-block;
-  width: 200px;
+  width: 500px;
 }
 
 .charte-des-valeurs {
-  margin: 80px auto 60px;
+  margin: 80px auto 180px;
   text-align: center;
 }
 
@@ -44,14 +44,15 @@ h1 {
 }
 
 .cdt {
-  max-width: 800px;
-  margin: 40px auto 100px;
+  overflow: hidden;
+  max-width: 720px;
+  margin: 40px auto 20px;
   font-family: Gillsansstd, sans-serif;
   color: #000;
   font-size: 22px;
   line-height: 1.35;
   font-weight: 400;
-  text-align: left;
+  text-align: justify;
   text-decoration: none;
 }
 
@@ -59,6 +60,19 @@ h1 {
   margin-top: 0px;
   margin-bottom: 40px;
   font-size: 30px;
+}
+
+.cdt.center {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-family: Gillsansstd, sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.cdt.center.cap {
+  font-weight: 400;
+  letter-spacing: 5px;
 }
 
 .partis-membres {
@@ -84,13 +98,16 @@ h1 {
 }
 
 .heading-2 {
-  max-width: 800px;
+  max-width: 720px;
+  margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
   font-family: 'Gill sans std', sans-serif;
   color: #000;
-  font-size: 26px;
-  text-align: left;
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 700;
+  text-align: justify;
 }
 
 .heading-3 {
@@ -105,6 +122,7 @@ h1 {
   display: -ms-grid;
   display: grid;
   height: 80px;
+  max-width: 1100px;
   margin-top: 40px;
   margin-bottom: 80px;
   -webkit-box-orient: horizontal;
@@ -121,10 +139,10 @@ h1 {
   -webkit-align-items: start;
   -ms-flex-align: start;
   align-items: start;
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
-  grid-auto-columns: 1fr;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  grid-auto-columns: auto;
   grid-column-gap: 16px;
   grid-row-gap: 16px;
   -ms-grid-columns: auto auto auto auto auto auto;
@@ -242,7 +260,7 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin: 80px auto 40px;
+  margin: 60px auto 40px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -257,6 +275,7 @@ h1 {
   font-family: Roboto, sans-serif;
   color: #000;
   font-size: 18px;
+  text-align: center;
 }
 
 .divider {
@@ -321,7 +340,7 @@ h1 {
 }
 
 .image-4 {
-  height: 65px;
+  height: 70px;
   padding-top: 10px;
   padding-bottom: 10px;
   mix-blend-mode: darken;
@@ -330,9 +349,10 @@ h1 {
 }
 
 .image-5 {
-  height: 70px;
+  height: 38px;
   padding-top: 10px;
   padding-bottom: 10px;
+  mix-blend-mode: darken;
   -o-object-fit: contain;
   object-fit: contain;
 }
@@ -345,12 +365,14 @@ h1 {
 }
 
 .image-7 {
-  height: 95px;
+  height: 70px;
+  mix-blend-mode: darken;
   -o-object-fit: contain;
   object-fit: contain;
 }
 
 .image-8 {
+  display: block;
   height: 80px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -430,7 +452,27 @@ h1 {
   display: none;
 }
 
+@media screen and (min-width: 1920px) {
+  .hero {
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  .cdt {
+    max-width: 1200px;
+  }
+
+  .heading-2 {
+    max-width: 1200px;
+  }
+}
+
 @media screen and (max-width: 991px) {
+  .hero {
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
   .charte-des-valeurs {
     max-width: 650px;
   }
@@ -445,6 +487,10 @@ h1 {
 }
 
 @media screen and (max-width: 767px) {
+  .hero {
+    background-size: cover;
+  }
+
   .charte-des-valeurs {
     max-width: 500px;
   }
@@ -454,6 +500,7 @@ h1 {
   }
 
   .logos-partis {
+    margin-top: 100px;
     -ms-grid-columns: auto auto auto;
     grid-template-columns: auto auto auto;
     -ms-grid-rows: auto auto;
@@ -466,9 +513,19 @@ h1 {
 }
 
 @media screen and (max-width: 479px) {
+  .hero {
+    height: 400px;
+    background-size: cover;
+  }
+
+  .logo {
+    width: 250px;
+  }
+
   .charte-des-valeurs {
     max-width: 250px;
     margin-top: 40px;
+    margin-bottom: 60px;
   }
 
   .cdt {
@@ -482,13 +539,22 @@ h1 {
     font-size: 18px;
   }
 
+  .cdt.center {
+    font-size: 18px;
+  }
+
   .partis-membres {
     padding-top: 0px;
   }
 
+  .heading-2 {
+    font-size: 18px;
+    text-align: left;
+  }
+
   .logos-partis {
     max-width: 250px;
-    margin-top: 10px;
+    margin-top: 100px;
     margin-bottom: 120px;
     -ms-grid-columns: auto auto;
     grid-template-columns: auto auto;
@@ -529,12 +595,26 @@ h1 {
     width: 250px;
   }
 
+  .center {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .heading-6 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
   .heading-7 {
     max-width: 250px;
+    font-size: 30px;
+    line-height: 1.2;
   }
 
   .heading-8 {
     margin-top: 20px;
+    font-size: 30px;
+    line-height: 1.2;
   }
 
   .div-mailchimp {
@@ -578,10 +658,10 @@ h1 {
 }
 
 #w-node-_806601fa-b9a0-b448-7a08-772483f35df0-103a2bd3 {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+  -webkit-align-self: start;
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
   -ms-grid-column-align: start;
   justify-self: start;
 }
@@ -611,6 +691,20 @@ h1 {
   font-family: 'Gillsansstd';
   src: url('../fonts/GillSansStd.otf') format('opentype');
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Monotype gill sans nova cn';
+  src: url('../fonts/Monotype-Gill-Sans-Nova-Cn-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Monotype gill sans nova';
+  src: url('../fonts/Monotype-Gill-Sans-Nova-Bold.otf') format('opentype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
