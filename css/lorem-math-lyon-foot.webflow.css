@@ -33,7 +33,7 @@ h1 {
 }
 
 .charte-des-valeurs {
-  margin: 80px auto 180px;
+  margin: 80px auto 100px;
   text-align: center;
 }
 
@@ -59,6 +59,7 @@ h1 {
 .cdt.mail {
   margin-top: 0px;
   margin-bottom: 40px;
+  font-family: Gillsansstd, sans-serif;
   font-size: 30px;
 }
 
@@ -260,21 +261,35 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  max-width: 1000px;
   margin: 60px auto 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  font-family: Roboto, sans-serif;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-family: Gillsansstd, sans-serif;
   color: #000;
   font-size: 18px;
+  font-style: normal;
   text-align: center;
 }
 
